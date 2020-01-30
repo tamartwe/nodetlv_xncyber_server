@@ -1,10 +1,10 @@
 import { Controller, Get, Res, Query } from '@nestjs/common';
 import { Response } from 'express';
 
-@Controller('icon')
-export class IconController {
+@Controller('images')
+export class ImagesController {
   @Get('*')
-  get(@Res() res: Response, @Query() filePath: string): void {
+  get(@Res() res: Response, @Query('filePath') filePath: string): void {
     res.sendFile(filePath);
   }
 }
