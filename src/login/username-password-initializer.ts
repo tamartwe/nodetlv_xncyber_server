@@ -30,6 +30,6 @@ async function initUsernamePassword(): Promise<void> {
 
 const getUsernamePasswords = (): Map<string, LoginDto> => {
   return usersPasswords;
-}
+};
 
-export { getUsernamePasswords, initUsernamePassword }
+export { getUsernamePasswords, initUsernamePassword };
