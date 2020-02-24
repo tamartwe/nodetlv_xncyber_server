@@ -1,7 +1,7 @@
 import { LoginDto } from './login.dto';
-import * as fs from 'fs'
-import * as csv from 'csv-parser'
-import * as path from 'path'
+import * as fs from 'fs';
+import * as csv from 'csv-parser';
+import * as path from 'path';
 
 const usersPasswords = new Map<string, LoginDto>();
 
