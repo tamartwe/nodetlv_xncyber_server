@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build && mkdir dist/resources && npm run copy:resources",
+    "build": "nest build && npm run create_dist && npm run copy:resources",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -18,7 +18,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "copy:resources": "cp -r src/resources/ dist/resources/"
+    "create_dist": "md dist\\resources",
+    "copy:resources": "xcopy src\\resources dist\\resources"
   },
   "dependencies": {
     "@nestjs/common": "^6.10.14",
@@ -31,7 +32,9 @@
     "path": "^0.12.7",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
-    "rxjs": "^6.5.4"
+    "rxjs": "^6.5.4",
+    "sanitize-filename": "^1.6.3",
+    "sanitize-filename-ts": "^1.0.2"
   },
   "devDependencies": {
     "@nestjs/cli": "^6.13.2",
