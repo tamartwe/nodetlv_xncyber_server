@@ -11,7 +11,7 @@ export class LoginController {
     if (res === -1) {
       throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
     }
-    return { 'res' : res};
+    return { res};
   }
   
 }

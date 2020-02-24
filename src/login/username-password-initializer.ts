@@ -14,8 +14,8 @@ async function initUsernamePassword(): Promise<void> {
         const username = row['username']; 
         const password = row['password'];
         const dto: LoginDto = {
-          'username': username,
-          'password': password
+          username,
+          password
         };
         usersPasswords.set(username, dto);
       })

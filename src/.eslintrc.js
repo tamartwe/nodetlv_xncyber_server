@@ -12,6 +12,7 @@ module.exports =  {
       // e.g. "@typescript-eslint/explicit-function-return-type": "off",
       "indent": "off",
       "@typescript-eslint/indent": ["error", 2],
-      semi: ["error", "always"]
+      semi: ["error", "always"],
+      "object-shorthand": ["error", "always"]
     },
   };
